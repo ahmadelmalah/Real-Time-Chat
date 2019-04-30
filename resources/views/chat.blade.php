@@ -11,7 +11,9 @@
 
             <ul class="list-group col-4 offset-md-4">
                 <li class="list-group-item active">Chat Room</li>
-                <message></message>
+                <message v-for="msg in chat.messages">
+                    @{{ msg }}
+                </message>
                 <input type="text" class="form_control" v-model="message" @keyup.enter="send" placeholder="Type your message" />
             </ul>
         </div>
