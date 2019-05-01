@@ -17,7 +17,7 @@
             <div class="col-4 offset-md-4">
                 <li class="list-group-item active">Chat Room</li>
                 <ul class="list-group">
-                    <message v-for="msg in chat.messages">
+                    <message v-for="msg in chat.messages" :key="msg.index">
                         @{{ msg }}
                     </message>
                 </ul>
