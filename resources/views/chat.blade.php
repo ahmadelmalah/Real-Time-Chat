@@ -16,7 +16,7 @@
         <div class="row" id="app">
             <div class="col-4 offset-md-4">
                 <li class="list-group-item active">Chat Room</li>
-                <ul class="list-group">
+                <ul class="list-group" v-chat-scroll>
                     <message v-for="msg in chat.messages" :key="msg.index">
                         @{{ msg }}
                     </message>
