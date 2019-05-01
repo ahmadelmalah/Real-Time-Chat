@@ -17,11 +17,11 @@
             <div class="col-4 offset-md-4">
                 <li class="list-group-item active">Chat Room</li>
                 <ul class="list-group" v-chat-scroll>
-                    <message v-for="msg in chat.messages" :key="msg.index">
+                    <message v-for="msg in chat.messages" :key="msg.index" color="success">
                         @{{ msg }}
                     </message>
                 </ul>
-                <input width="100%" type="text" class="form_control" v-model="message" @keyup.enter="send" placeholder="Type your message" />
+                <input type="text" class="form_control" v-model="message" @keyup.enter="send" placeholder="Type your message" />
             </div>
         </div>
     </div>
